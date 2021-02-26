@@ -1,15 +1,26 @@
-import React from "react";
-import { Text, StyleSheet } from "react-native";
+import React,{useState} from "react";
+import { Text, StyleSheet,View,Button } from "react-native";
 
 const ComponentScreen = () => {
-    return <Text style={styles.text}>i am a Component</Text>
-
+    const [counter,setCounter]=useState(0);
+    return (
+        
+    <View>
+    <Button title ="Add Color" />
+    <Text style={styles.subtext}>i am a subheading</Text>
+  </View>
+    )
 }
 
 const styles = StyleSheet.create({
     text:{
-        fontSize :20,
-        
+        fontSize :30,
+        color : 'red'
+    },
+    subtext:{
+        fontSize:10
     }
+        
+    
 })
 export default ComponentScreen;
